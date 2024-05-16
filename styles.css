@@ -1,0 +1,104 @@
+/* Importar la fuente de Google Fonts y establecer estilos base */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Estilos base para el documento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Variables CSS */
+:root {
+    --mainColor: #89216b; /* Color principal */
+    --whiteColor: #ffffff; /* Color blanco */
+    --titleColor: #555555; /* Color del título */
+    --labelColor: #333333; /* Color de las etiquetas */
+}
+
+/* Estilos para el cuerpo del documento */
+html {
+    font-size: 90%; /* Establecer tamaño de fuente base */
+    scroll-behavior: smooth; /* Suavizar el desplazamiento */
+}
+
+body {
+    background: linear-gradient(to right, #da4453, var(--mainColor)); /* Fondo con degradado */
+    font-weight: 400;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal del formulario */
+.wrapper {
+    position: relative;
+    width: 30rem; /* Ancho del contenedor */
+    max-width: 90%;
+    background-color: var(--whiteColor); /* Color de fondo blanco */
+    border-radius: .5rem; /* Borde redondeado */
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); /* Sombra */
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Estilos para el título del formulario */
+.wrapper h1 {
+    font-size: 3.5rem; /* Tamaño del título */
+    text-transform: capitalize; /* Convertir a mayúsculas */
+    color: var(--titleColor); /* Color del título */
+    margin-bottom: 2rem;
+}
+
+/* Estilos para el cuadro de texto */
+.wrapper textarea {
+    width: 100%;
+    height: 20rem; /* Altura inicial del cuadro de texto */
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: .1rem solid var(--labelColor); /* Borde del cuadro de texto */
+    font-size: 1rem;
+    color: var(--labelColor); /* Color del texto */
+    background: transparent;
+    resize: vertical; /* Permitir redimensionar verticalmente */
+}
+
+/* Estilos para el botón de analizar */
+.wrapper button {
+    padding: 1rem 5rem;
+    background-color: var(--mainColor); /* Color principal */
+    color: var(--whiteColor); /* Color del texto */
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.8rem; /* Tamaño del texto del botón */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.wrapper button:hover {
+    background-color: #6c2a80; /* Color al pasar el ratón */
+}
+
+/* Estilos para el resultado del análisis */
+.resultado-wrapper {
+    display: none;
+    margin-top: 2rem;
+    margin-bottom: 2rem; /* Separación del resultado del botón */
+    width: 100%;
+    height: 10rem; /* Mismo tamaño que el cuadro de texto principal */
+    background-color: #f8f8f8;
+    border-radius: .5rem;
+    padding: 2rem;
+    box-shadow: 0 0 .5rem 0 rgba(0, 0, 0, .1);
+    font-size: 2rem; /* Tamaño de la fuente del resultado */
+    overflow-y: auto; /* Barra de desplazamiento vertical si es necesario */
+}
+
+.resultado-wrapper h2 {
+    color: var(--titleColor);
+    font-size: 2.5rem; /* Tamaño del título del resultado */
+    margin-bottom: 1rem;
+}

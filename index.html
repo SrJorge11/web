@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Analizador Léxico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="form-container">
+            <form id="formulario">
+                <h2>Analizador Léxico</h2>
+                <div class="grupo-formulario">
+                    <textarea id="codigo" name="codigo" rows="10"></textarea>
+                </div>
+                <button type="button" class="btn" onclick="analizarCodigo()">Analizar</button>
+            </form>
+        </div>
+        
+        <div id="resultado" style="display: none;">
+            <h3>Resultado:</h3>
+            <div id="tipoAnalisis"></div>
+            <div id="tipoToken"></div>
+            <div id="errores"></div>
+        </div>
+
+        <div id="resultadoNormal" style="display: none;">
+            <h3>Resultado Normal:</h3>
+            <div id="resultadoNormalText"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
